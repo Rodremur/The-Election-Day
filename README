@@ -1,0 +1,84 @@
+./electionday
+/*-------------------------------
+ *By Rodrigo Reyes
+ *Problem 12020 UVa Online Judge
+ */
+There are more than 8.000 municipalities in Spain. Each municipality has a number of councilors,
+which have to be elected in the upcoming municipal elections. The number of councilors elected from
+each political party must be proportional to the number of votes obtained by that party.
+Obviously, this can be a little unfair. For example, assume that we have to elect 2 councilors in a
+certain municipality where party A has received 65 votes, and party B has received 35 votes. Then,
+both parties would obtain 50% of the councilors (one councilor for each party).
+Therefore, in order to reduce these unfair situations, we decide that we will always elect 100 councilors
+for each municipality.
+
+Given the number of votes for each party, you have to compute the number of councilors assigned
+to each party, assuming that the total number of councilors is 100.
+You have to observe the rule of proportionality: the number of assigned councilors has to be
+proportional (the maximum possible) to the number of obtained votes. In other words, there exists a
+number of votes, x, such that when a party has x votes, then they win a councilor.
+If two or more parties have exactly the same proportion to obtain a councilor, then you have to
+assign it to the first party in alphabetical order. For example, ifthree parties have 1/3 of the votes,
+then the first party in alphabetical order would have 34 councilors, and the other parties 33 councilors.
+
+Input
+The input can contain different test cases. The first line of the input indicates the number of test cases.
+For each test case, the first line contains one natural number, P,indicating the number of existing
+political parties. You can assume that P ≤ 4.
+The following two lines contain the text:
+
+BLANK B
+INVALID I
+
+Where B and I indicate the number of blank and invalid votes, respectively. Next, there are P
+lines, one for each party. Each line contains two values: a string without blank spaces, indicating the
+name of the party; and a number, indicating the number of votesfor that party.
+You can assume that the number of votes for a party is always between 0 and 1000, inclusive.
+
+For each test case, you have to output the number of councilors obtained by each party, in the same
+order as they appear in the input. Thus, you have to output P lines, with the name of the party and
+the number of councilors assigned to that party, separated by a blank space.
+
+Note: Observe that, in the last case, the number of votes to win a councilor is x = 6.0695. That is, a
+party wins a councilor for each 6.0695 votes obtained.
+
+Sample Input
+4
+2
+BLANK 0
+INVALID 4
+A 65
+B 35
+3
+BLANK 203
+INVALID 287
+Pragmatics 50
+Paradigmatics 50
+Programatics 50
+3
+BLANK 22
+INVALID 1000
+SimpleMinds 5
+UniqueThinking 3
+RunWithMoney 6
+4
+BLANK 0
+INVALID 92
+One 261
+Two 283
+Three 61
+Four 12
+
+Sample Output
+A 65
+B 35
+Pragmatics 33
+Paradigmatics 34
+Programatics 33
+SimpleMinds 36
+UniqueThinking 21
+RunWithMoney 43
+One 43
+Two 46
+Three 10
+Four 1
